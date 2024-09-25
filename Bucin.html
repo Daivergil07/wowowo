@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucin Quotes Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFC0CB; /* light pink */
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+        #quoteBox {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #quote {
+            font-size: 24px;
+            color: #FF1493;
+        }
+        #generateButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #FF69B4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #generateButton:hover {
+            background-color: #FF1493;
+        }
+    </style>
+</head>
+<body>
+    <div id="quoteBox">
+        <h1>💖 Bucin Quotes Generator 💖</h1>
+        <p id="quote">Click the button for a sweet bucin quote!</p>
+        <button id="generateButton">Generate Bucin Quote</button>
+    </div>
+
+    <script>
+        const quotes = [
+            "Kamu itu kayak kopi, pahit tapi bikin nagih. ☕️",
+            "Setiap detik tanpa kamu, hidupku berasa sepi banget. 😢",
+            "Aku rela jadi satpam di hatimu, biar yang lain nggak bisa masuk. 🚪💖",
+            "Kamu tuh kayak charger, selalu ngisi energi ke aku saat aku lelah. 🔌❤️",
+            "Cintaku ke kamu itu ibarat Wi-Fi, walaupun sinyalnya lemah, tapi nggak pernah hilang. 📶💘",
+            "Sehari tanpa senyumanmu, rasanya hidupku nggak lengkap. 😍",
+            "Kalau aku jadi cat, kamu bakal jadi kuasnya, biar kita bisa menggambar masa depan bareng. 🎨💞",
+            "Aku nggak butuh Valentine, setiap hari sama kamu udah lebih dari cukup. 💐❤️",
+            "Mau hujan atau panas, perasaanku ke kamu nggak akan berubah. ☀️🌧",
+            "Kamu seperti bulan di malam yang gelap, selalu menerangi hatiku. 🌙❤️"
+        ];
+
+        const quoteElement = document.getElementById('quote');
+        const button = document.getElementById('generateButton');
+
+        button.addEventListener('click', () => {
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            quoteElement.innerText = randomQuote;
+        });
+    </script>
+</body>
+</html>
